@@ -25,7 +25,5 @@ func main() {
 			fmt.Printf("Solution for Day2 part 1 is: %d\n", day2.GetValidPasswordsNumber(inputs, day2.ValidateOldCompanyPassword))
 			fmt.Printf("Solution for Day2 part 2 is: %d\n", day2.GetValidPasswordsNumber(inputs, day2.ValidateCurrenctCompanyPassword))
 		}
-
 	}
-
 }
