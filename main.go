@@ -3,6 +3,7 @@ package main
 import (
 	"advent-of-code-2020/day1"
 	"advent-of-code-2020/day2"
+	"advent-of-code-2020/day3"
 	"fmt"
 	"os"
 )
@@ -24,6 +25,14 @@ func main() {
 			inputs := day2.ConvertToSlice("./day2/input.txt")
 			fmt.Printf("Solution for Day2 part 1 is: %d\n", day2.GetValidPasswordsNumber(inputs, day2.ValidateOldCompanyPassword))
 			fmt.Printf("Solution for Day2 part 2 is: %d\n", day2.GetValidPasswordsNumber(inputs, day2.ValidateCurrenctCompanyPassword))
+			return
+		}
+	case "day3":
+		{
+			inputs := day3.ConvertToSlice("./day3/input.txt")
+			fmt.Printf("Solution for Day 3 part 1 is: %d\n", day3.FindTreesNumber(inputs, 3, 1))
+			fmt.Printf("Solution for Day 3 part 2 is: %d\n", day3.FindMultipliedTreesNumber(inputs))
+			return
 		}
 	}
 }
