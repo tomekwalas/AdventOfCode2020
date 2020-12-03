@@ -1,8 +1,7 @@
 package day3
 
 import (
-	"io/ioutil"
-	"strings"
+	"advent-of-code-2020/utils"
 )
 
 const (
@@ -10,23 +9,18 @@ const (
 	blank = "."
 )
 
-func check(e error) {
-	if e != nil {
-		panic(e)
-	}
-}
-
+//ConvertToSlice converting file to input slice
 func ConvertToSlice(filename string) []string {
 	inputs := []string{}
-	data, err := ioutil.ReadFile(filename)
-	check(err)
-	for _, inputString := range strings.Split(string(data), "\n") {
+
+	for _, inputString := range utils.ReadFile(filename) {
 		inputs = append(inputs, inputString)
 	}
 
 	return inputs
 }
 
+//FindTreesNumber finds tree number
 func FindTreesNumber(inputs []string, xHop, yHop int) int {
 	xPos := 0
 	yPos := 0
@@ -45,6 +39,7 @@ func FindTreesNumber(inputs []string, xHop, yHop int) int {
 	}
 }
 
+//FindMultipliedTreesNumber finds multiplied trees number
 func FindMultipliedTreesNumber(inputs []string) int {
 	variants := []struct{ xHop, yHop int }{{xHop: 1, yHop: 1}, {xHop: 3, yHop: 1}, {xHop: 5, yHop: 1}, {xHop: 7, yHop: 1}, {xHop: 1, yHop: 2}}
 	counter := 1

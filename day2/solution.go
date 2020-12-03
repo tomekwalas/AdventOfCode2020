@@ -1,7 +1,7 @@
 package day2
 
 import (
-	"io/ioutil"
+	"advent-of-code-2020/utils"
 	"strconv"
 	"strings"
 )
@@ -64,12 +64,8 @@ func ValidateCurrenctCompanyPassword(pass Password) bool {
 //ConvertToSlice converting file to input slice
 func ConvertToSlice(filename string) []Password {
 	passwords := []Password{}
-	data, err := ioutil.ReadFile(filename)
-	if err != nil {
-		panic(err)
-	}
 
-	for _, input := range strings.Split(string(data), "\n") {
+	for _, input := range utils.ReadFile(filename) {
 		values := strings.Split(input, ":")
 		passwordPolicy := values[0]
 		password := strings.TrimSpace(values[1])
