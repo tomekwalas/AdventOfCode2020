@@ -11,13 +11,7 @@ const (
 
 //ConvertToSlice converting file to input slice
 func ConvertToSlice(filename string) []string {
-	inputs := []string{}
-
-	for _, inputString := range utils.ReadFile(filename) {
-		inputs = append(inputs, inputString)
-	}
-
-	return inputs
+	return utils.ReadFile(filename)
 }
 
 //FindTreesNumber finds tree number
