@@ -142,7 +142,7 @@ func eclValidatorFunc(value string) bool {
 }
 
 func pidValidatorFunc(value string) bool {
-	match, err := regexp.MatchString("[0-9]{9}", value)
+	match, err := regexp.MatchString("^[0-9]{9}$", value)
 	if err != nil {
 		return false
 	}
