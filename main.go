@@ -5,6 +5,8 @@ import (
 	"advent-of-code-2020/day2"
 	"advent-of-code-2020/day3"
 	"advent-of-code-2020/day4"
+	"advent-of-code-2020/day5"
+	"advent-of-code-2020/utils"
 	"fmt"
 	"os"
 )
@@ -41,6 +43,12 @@ func main() {
 			fmt.Printf("Solution for Day 4 part 1 is: %d\n", day4.FindValidPassportsNumber(inputs, false))
 			fmt.Printf("Solution for Day 4 part 2 is: %d\n", day4.FindValidPassportsNumber(inputs, true))
 			return
+		}
+	case "day5":
+		{
+			inputs := utils.ReadFile("./day5/input.txt")
+			fmt.Printf("Solution for Day 5 part 1 is: %d\n", day5.FindHighestBoardingPassID(inputs))
+			fmt.Printf("Solution for Day 5 part 2 is: %d\n", day5.FindYourSeat(inputs))
 		}
 	}
 }
