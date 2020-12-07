@@ -7,6 +7,7 @@ import (
 	"advent-of-code-2020/day4"
 	"advent-of-code-2020/day5"
 	"advent-of-code-2020/day6"
+	"advent-of-code-2020/day7"
 	"advent-of-code-2020/utils"
 	"fmt"
 	"os"
@@ -56,6 +57,13 @@ func main() {
 			inputs := utils.ReadFile("./day6/input.txt")
 			fmt.Printf("Solution for Day 6 part 1 is: %d\n", day6.FindSumOfAnswers(inputs))
 			fmt.Printf("Solution for Day 6 part 2 is: %d\n", day6.FindSumOfAllAnswers(inputs))
+		}
+	case "day7":
+		{
+			inputs := utils.ReadFile("./day7/input.txt")
+			bags := day7.ConvertToSlice(inputs)
+			fmt.Printf("Solution for Day 7 part 1 is: %d\n", day7.SearchForGoldBagInBags(bags))
+			fmt.Printf("Solution for Day 7 part 2 is: %d\n", day7.FindBagsNumberInGoldBag(bags))
 		}
 	}
 }
