@@ -8,6 +8,7 @@ import (
 	"advent-of-code-2020/day5"
 	"advent-of-code-2020/day6"
 	"advent-of-code-2020/day7"
+	"advent-of-code-2020/day8"
 	"advent-of-code-2020/utils"
 	"fmt"
 	"os"
@@ -64,6 +65,12 @@ func main() {
 			bags := day7.ConvertToSlice(inputs)
 			fmt.Printf("Solution for Day 7 part 1 is: %d\n", day7.SearchForGoldBagInBags(bags))
 			fmt.Printf("Solution for Day 7 part 2 is: %d\n", day7.FindBagsNumberInGoldBag(bags))
+		}
+	case "day8":
+		{
+			inputs := day8.ConvertToSlice("./day8/input.txt")
+			fmt.Printf("Solution for Day 8 part 1 is: %d\n", day8.FindAccumulatorValue(inputs))
+			fmt.Printf("Solution for Day 8 part 2 is: %d\n", day8.FixProgram(inputs))
 		}
 	}
 }
