@@ -9,6 +9,7 @@ import (
 	"advent-of-code-2020/day6"
 	"advent-of-code-2020/day7"
 	"advent-of-code-2020/day8"
+	"advent-of-code-2020/day9"
 	"advent-of-code-2020/utils"
 	"fmt"
 	"os"
@@ -71,6 +72,13 @@ func main() {
 			inputs := day8.ConvertToSlice("./day8/input.txt")
 			fmt.Printf("Solution for Day 8 part 1 is: %d\n", day8.FindAccumulatorValue(inputs))
 			fmt.Printf("Solution for Day 8 part 2 is: %d\n", day8.FixProgram(inputs))
+		}
+	case "day9":
+		{
+			inputs := day1.ConvertToSlice("./day9/input.txt")
+			result := day9.FindNumber(inputs, 25)
+			fmt.Printf("Solution for Day 9 part 1 is: %d\n", result)
+			fmt.Printf("Solution for Day 9 part 2 is: %d\n", day9.FindContiguousSet(inputs, result))
 		}
 	}
 }

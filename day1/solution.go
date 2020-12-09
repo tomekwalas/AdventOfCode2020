@@ -33,7 +33,7 @@ func FindSolution(inputs []int, partialInput int, depth int, maxDeph int) int {
 
 	for _, input := range inputs {
 		inputToSearch := partialInput - input
-		if inputToSearch < 0 {
+		if inputToSearch < 0 || inputToSearch == input {
 			continue
 		}
 		partialInput := FindSolution(inputs, inputToSearch, depth+1, maxDeph)
