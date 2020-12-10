@@ -2,6 +2,7 @@ package main
 
 import (
 	"advent-of-code-2020/day1"
+	"advent-of-code-2020/day10"
 	"advent-of-code-2020/day2"
 	"advent-of-code-2020/day3"
 	"advent-of-code-2020/day4"
@@ -79,6 +80,12 @@ func main() {
 			result := day9.FindNumber(inputs, 25)
 			fmt.Printf("Solution for Day 9 part 1 is: %d\n", result)
 			fmt.Printf("Solution for Day 9 part 2 is: %d\n", day9.FindContiguousSet(inputs, result))
+		}
+	case "day10":
+		{
+			inputs := day1.ConvertToSlice("./day10/input.txt")
+			fmt.Printf("Solution for Day 10 part 1 is: %d\n", day10.FindAdaptersChain(inputs))
+			fmt.Printf("Solution for Day 10 part 2 is: %d\n", day10.FindAdaptersPermutations(inputs))
 		}
 	}
 }
