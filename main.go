@@ -3,6 +3,7 @@ package main
 import (
 	"advent-of-code-2020/day1"
 	"advent-of-code-2020/day10"
+	"advent-of-code-2020/day11"
 	"advent-of-code-2020/day2"
 	"advent-of-code-2020/day3"
 	"advent-of-code-2020/day4"
@@ -86,6 +87,12 @@ func main() {
 			inputs := day1.ConvertToSlice("./day10/input.txt")
 			fmt.Printf("Solution for Day 10 part 1 is: %d\n", day10.FindAdaptersChain(inputs))
 			fmt.Printf("Solution for Day 10 part 2 is: %d\n", day10.FindAdaptersPermutations(inputs))
+		}
+	case "day11":
+		{
+			inputs := day11.ConvertToSlice("./day11/input.txt")
+			fmt.Printf("Solution for Day 11 part 1 is: %d\n", day11.FindCooupiedSeats(inputs))
+			fmt.Printf("Solution for Day 11 part 2 is: %d\n", day11.FindOccupiedSeatsBetter(inputs))
 		}
 	}
 }
