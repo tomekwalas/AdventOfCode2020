@@ -4,6 +4,7 @@ import (
 	"advent-of-code-2020/day1"
 	"advent-of-code-2020/day10"
 	"advent-of-code-2020/day11"
+	"advent-of-code-2020/day12"
 	"advent-of-code-2020/day2"
 	"advent-of-code-2020/day3"
 	"advent-of-code-2020/day4"
@@ -93,6 +94,12 @@ func main() {
 			inputs := day11.ConvertToSlice("./day11/input.txt")
 			fmt.Printf("Solution for Day 11 part 1 is: %d\n", day11.FindCooupiedSeats(inputs))
 			fmt.Printf("Solution for Day 11 part 2 is: %d\n", day11.FindOccupiedSeatsBetter(inputs))
+		}
+	case "day12":
+		{
+			inputs := day12.ConvertToSlice("./day12/input.txt")
+			fmt.Printf("Solution for Day 12 part 1 is: %d\n", day12.FindBoatDirection(inputs))
+			fmt.Printf("Solution for Day 12 part 2 is: %d\n", day12.FindBoatDirectionFromWaypoint(inputs))
 		}
 	}
 }
